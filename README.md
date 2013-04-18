@@ -1,5 +1,5 @@
-Amazon Cloudwatch Metrics for Linux AMIs
-========================================
+Amazon Cloudwatch Extra Metrics for Linux AMIs
+==============================================
 
 Provides these Cloudwatch metrics which are not available in Amazon's "Detailed Monitoring" for EC2 instances by default:
 
