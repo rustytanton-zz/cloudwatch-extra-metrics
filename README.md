@@ -5,6 +5,7 @@ Provides these Cloudwatch metrics which are not available in Amazon's "Detailed 
 
 * FreeMemoryMBytes
 * UsedMemoryPercent
+* YumUpdatesAvailable
 
 Installation
 ------------
