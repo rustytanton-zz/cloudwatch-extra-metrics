@@ -1,7 +1,7 @@
 Amazon Cloudwatch Extra Metrics for Linux AMIs
 ==============================================
 
-Provides these Cloudwatch metrics which are not available in Amazon's "Detailed Monitoring" for EC2 instances by default:
+Provides these Cloudwatch metrics which are not available in Amazon's "Detailed Monitoring" for EC2 instances by default.
 
 * FreeMemoryMBytes
 * UsedMemoryPercent
@@ -22,8 +22,12 @@ Usage
 -----
 Set up a cron job to run a metric script from this repo at the desired interval. 
 
-Here is an example crontab which sends metrics every five minutes, it sets environment variables from ~/.bash_profile before running:
+Here is an example crontab which sends metrics, it sets environment variables from ~/.bash_profile before running:
 
 
+	# memory stats every five minutes
 	*/5 * * * * . $HOME/.bash_profile; /path/to/cloudwatch-extra-metrics/metrics/UsedMemoryPercent.sh
 	*/5 * * * *  . $HOME/.bash_profile; /path/to/cloudwatch-extra-metrics/metrics/FreeMemoryMBytes.sh
+
+	# yum updates status daily
+	@daily . $HOME/.bash_profile; /path/to/cloudwatch-extra-metrics/metrics/YumUpdatesAvailable.sh
