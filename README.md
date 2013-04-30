@@ -36,4 +36,8 @@ Here is an example of the ec2-user crontab which sends metrics. It sets environm
 	# yum updates status daily
 	@daily . $HOME/.bash_profile; /path/to/cloudwatch-extra-metrics/metrics/YumUpdatesAvailable.sh
 
-The ServiceAvailable metric requires password-less sudo for the user running the job (comes with the Amazon Linux ec2-user account, may not come with default user in other AMIs).
+Notes
+-----
+
+* The ServiceAvailable metric requires password-less sudo for the user running the job (comes with the Amazon Linux ec2-user account, may not come with default user in other AMIs).
+* The ServiceAvailable and YumUpdatesAvailable metrics may not show up in Cloudwatch until the first failure
